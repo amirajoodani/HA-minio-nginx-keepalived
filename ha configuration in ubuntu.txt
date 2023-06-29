@@ -1,0 +1,9 @@
+(on both node):
+sudo apt install -y nginx keepalived htop
+sudo systemctl enable nginx --now
+ufw allow http
+ufw allow https
+ufw allow from 224.0.0.18
+ufw allow to 224.0.0.18
+sudo cp /etc/keepalived/keepalived.conf /etc/keepalived/keepalived.conf.bck
+nano /etc/keepalived/keepalived.conf
